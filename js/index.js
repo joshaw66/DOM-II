@@ -21,7 +21,6 @@ const image3 = document.getElementsByTagName('img')[1];
 const image4 = document.getElementsByTagName('img')[3];
 
 
-
 // MouseOver
 
 nav.addEventListener('mouseover', (event) => {
@@ -93,6 +92,18 @@ image4.addEventListener('wheel', (event) => {
         event.target.style.opacity = "";
     }, 500);
 }, false);
+
+// KeyDown
+
+body.addEventListener('keydown', (event) => {
+    body.style.background = 'tan';
+})
+
+// Load
+
+window.addEventListener("load", function(event) {
+    alert("The page has now loaded");
+    });
 
 
 
