@@ -104,13 +104,13 @@ body.addEventListener('keydown', (event) => {
 
 // Load
 
-window.addEventListener("load", function(event) {
+window.addEventListener("load", (event) => {
     alert("The page has now loaded");
     });
 
 // Stop Nav Reload
 
-navReload.addEventListener('click', function(e) {
+navReload.addEventListener('click', (event) => {
   e.preventDefault();
 })
 
