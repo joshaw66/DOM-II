@@ -20,6 +20,8 @@ const image3 = document.getElementsByTagName('img')[1];
 
 const image4 = document.getElementsByTagName('img')[3];
 
+const navReload = document.querySelector('.nav a');
+
 
 // MouseOver
 
@@ -97,6 +99,7 @@ image4.addEventListener('wheel', (event) => {
 
 body.addEventListener('keydown', (event) => {
     body.style.background = 'tan';
+    event.stopPropagation();
 })
 
 // Load
@@ -104,6 +107,12 @@ body.addEventListener('keydown', (event) => {
 window.addEventListener("load", function(event) {
     alert("The page has now loaded");
     });
+
+// Stop Nav Reload
+
+navReload.addEventListener('click', function(e) {
+  e.preventDefault();
+})
 
 
 
