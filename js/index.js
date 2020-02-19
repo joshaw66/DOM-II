@@ -32,6 +32,13 @@ nav.addEventListener('mouseover', (event) => {
       }, 500);
 }, false);
 
+// KeyDown
+
+body.addEventListener('keydown', (event) => {
+    body.style.background = 'tan';
+    event.stopPropagation();
+})
+
 // KeyUp
 
 body.addEventListener('keyup', (event) => {
@@ -95,17 +102,10 @@ image4.addEventListener('wheel', (event) => {
     }, 500);
 }, false);
 
-// KeyDown
-
-body.addEventListener('keydown', (event) => {
-    body.style.background = 'tan';
-    event.stopPropagation();
-})
-
 // Load
 
 window.addEventListener("load", (event) => {
-    alert("The page has now loaded");
+    alert("Congratulations, the page loaded!");
     });
 
 // Stop Nav Reload
@@ -113,6 +113,25 @@ window.addEventListener("load", (event) => {
 navReload.addEventListener('click', (event) => {
   e.preventDefault();
 })
+
+// Propogation Example and Nesting
+
+const button = document.querySelector('.btn');
+
+button.addEventListener("click", (event) => alert("YOU CANT SIGN UP ITS NOT REAL!"));
+
+    const h1 = document.querySelector('.intro p');
+
+    h1.addEventListener("click", (event) => {
+     event.stopPropagation();
+        h1.style.border = "5px dotted black";
+        setTimeout(function() {
+            event.target.style.border = "";
+        }, 500);
+    }, false);
+
+
+
 
 
 
